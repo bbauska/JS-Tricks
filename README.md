@@ -92,9 +92,11 @@ getParameters(window.location)
 12. Log Time from Date
 We can log time, in the format hour::minutes::seconds from a given
 date.
+```
 const timeFromDate = date => date.toTimeString().slice(0, 8);
 console.log(timeFromDate(new Date(2021, 0, 10, 17, 30, 0)));
 // Result: "17:30:00"
+```
 13. Check if a number is even or odd
 A simple JavaScript function named "isEven" determines if a number is
 even or odd. It takes a "num" as input and returns true if even, false if
@@ -173,12 +175,12 @@ Calculate the area of a circle given its radius.
 const calculateCircleArea = (radius) => Math.PI * Math.pow(radius,
 ```
 2);
-```
 calculateCircleArea(5);
 // Result: 78.53981633974483
 ```
 24. Check if a Number is Prime
 Determine if a given number is a prime number.
+```
 const isPrime = (num) => {
 if (num <= 1) return false;
 for (let i = 2; i <= Math.sqrt(num); i++) {
@@ -188,29 +190,36 @@ return true;
 };
 isPrime(13);
 // Result: true
+```
 25. Count Occurrences of a Character in a
 String
 Count the occurrences of a specific character in a given string.
+```
 const countOccurrences = (str, char) => str.split(char).length - 1;
 countOccurrences("banana", "a");
 // Result: 3
+```
 26. Remove Leading and Trailing
 Whitespaces
 Remove leading and trailing whitespaces from a given string.
+```
 const removeWhitespaces = (str) => str.trim();
 removeWhitespaces(" Hello, world! ");
 // Result: "Hello, world!"
+```
 27. Generate a Random Number within a
 Range
 Generate a random integer within a specified range.
+```
 const randomInRange = (min, max) => Math.floor(Math.random() *
 (max - min + 1)) + min;
 randomInRange(1, 10);
 // Result: Random number between 1 and 10 (inclusive)
-
+```
 28. Convert Seconds to HH:MM:SS Format
 Convert a given number of seconds into the "hours:minutes:seconds"
 format.
+```
 const secondsToHHMMSS = (seconds) => {
 const pad = (num) => String(num).padStart(2, '0');
 const hours = Math.floor(seconds / 3600);
@@ -219,43 +228,57 @@ const secs = seconds % 60;
 return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 };
 secondsToHHMMSS(3660); // Result: "01:01:00"
+```
 29. Get the Last Element of an Array
 Retrieve the last element of a given array.
+```
 const getLastElement = (arr) => arr[arr.length - 1];
 getLastElement([1, 2, 3, 4]);
 // Result: 4
+```
 30. Sort an Array of Numbers in Ascending
 Order
 Sort a given array of numbers in ascending order.
+```
 const sortAscending = (arr) => arr.slice().sort((a, b) => a - b);
 sortAscending([3, 1, 4, 1, 5, 9, 2, 6, 5, 3]);
 // Result: [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
+```
 31. Check if a String is Palindrome
 Determine if a given string is a palindrome.
+```
 const isPalindrome = (str) => str === str.split('').reverse().join('');
 isPalindrome("level");
 // Result: true
+```
 32. Calculate Factorial of a Number
 Calculate the factorial of a given number.
+```
 const factorial = (num) => {
 if (num === 0 || num === 1) return 1;
 return num * factorial(num - 1);
 };
 factorial(5);
 // Result: 120
+```
 33. Sum all Numbers in an Array
 Calculate the sum of all numbers in a given array.
+```
 const sumArray = (arr) => arr.reduce((acc, val) => acc + val, 0);
 sumArray([1, 2, 3, 4, 5]);
 // Result: 15
+```
 34. Find the Maximum Value in an Array
 Find the maximum value in a given array of numbers.
+```
 const findMax = (arr) => Math.max(...arr);
 findMax([10, 5, 8, 20, 3]);
 // Result: 20
+```
 35. Get the Current Date in DD/MM/YYYY
 Format
 Get the current date in the "DD/MM/YYYY" format.
+```
 const getCurrentDate = () => {
 const date = new Date();
 const day = String(date.getDate()).padStart(2, '0');
@@ -264,4 +287,4 @@ const year = date.getFullYear();
 return `${day}/${month}/${year}`;
 };
 getCurrentDate(); // Result: "02/08/2023"
-
+```
