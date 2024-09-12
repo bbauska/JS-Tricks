@@ -3,27 +3,30 @@ JavaScript tips, tricks, techniques.  ES6 or greater. Chrome predominantly.
 
 2. Get Value of a brower Cookie
 Retrieve the value of a cookie by accessing with document.cookie
+```
 const cookie = name => `; ${document.cookie}`.split(`; ${name}
 =`).pop().split(';').shift();
 cookie('_ga');
 // Result: "GA1.2.1929736587.1601974046
-
+```
 3. Convert RGB to Hex
 rgbToHex enables you to convert RGB (Red, Green, Blue) values to their
 corresponding hexadecimal representation.
+```
 const rgbToHex = (r, g, b) =>
 "#" + ((1 << 24) + (r << 16) + (g << 8) +
 b).toString(16).slice(1);
 rgbToHex(0, 51, 255);
 // Result: #0033f
-
 // Result: #0033ff
+```
 4. Copy to Clipboard
 Easily copy any text to clipboard using navigator.clipboard.writeText.
+```
 const copyToClipboard = (text) =>
 navigator.clipboard.writeText(text);
 copyToClipboard("Hello World");
-
+```
 5. Check if Date is Valid
 Use the following snippet to check if a given date is valid or not.
 const isDateValid = (...val) => !Number.isNaN(new
