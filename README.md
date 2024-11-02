@@ -9,7 +9,7 @@ const cookie = name => `; ${document.cookie}`.split(`; ${name}
 cookie('_ga');
 // Result: "GA1.2.1929736587.1601974046
 ```
-3. Convert RGB to Hex
+<b>3. Convert RGB to Hex</b>
 rgbToHex enables you to convert RGB (Red, Green, Blue) values to their
 corresponding hexadecimal representation.
 ```
@@ -20,14 +20,14 @@ rgbToHex(0, 51, 255);
 // Result: #0033f
 // Result: #0033ff
 ```
-4. Copy to Clipboard
+<b>4. Copy to Clipboard</b>
 Easily copy any text to clipboard using navigator.clipboard.writeText.
 ```
 const copyToClipboard = (text) =>
 navigator.clipboard.writeText(text);
 copyToClipboard("Hello World");
 ```
-5. Check if Date is Valid
+<b>5. Check if Date is Valid</b>
 Use the following snippet to check if a given date is valid or not.
 ```
 const isDateValid = (...val) => !Number.isNaN(new
@@ -35,7 +35,7 @@ Date(...val).valueOf());
 isDateValid("December 17, 1995 03:24:00");
 // Result: true
 ```
-7. Find the day of year
+<b>7. Find the day of year</b>
 Find which is the day by a given date.
 ```
 const dayOfYear = (date) =>
