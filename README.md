@@ -1,7 +1,7 @@
 # JS-Tricks
 JavaScript tips, tricks, techniques.  ES6 or greater. Chrome predominantly.
-
-2. Get Value of a browser Cookie
+<b>
+2. Get Value of a browser Cookie</b>
 Retrieve the value of a cookie by accessing with document.cookie
 ```
 const cookie = name => `; ${document.cookie}`.split(`; ${name}
