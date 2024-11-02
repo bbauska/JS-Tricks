@@ -283,5 +283,5 @@ const month = String(date.getMonth() + 1).padStart(2, '0');
 const year = date.getFullYear();
 return `${day}/${month}/${year}`;
 };
-getCurrentDate(); // Result: "02/08/2023"
+getCurrentDate(); // Result: "11/02/2024"
 ```
