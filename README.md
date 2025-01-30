@@ -9,17 +9,16 @@
 Retrieve the value of a cookie by accessing with document.cookie
 
 ```
-const cookie = name => `; ${document.cookie}`.split(`; ${name}
-=`).pop().split(';').shift();
-cookie('_ga');
-// Result: "GA1.2.1929736587.1601974046
+const cookie = name => `; ${document.cookie}`.split(`; ${name} =`).pop().split(';').shift();
+
+cookie('_ga');  // Result: "GA1.2.1929736587.1601974046
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>2. Convert RGB to Hex</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-rgbToHex enables you to convert RGB (Red, Green, Blue) values to their
-corresponding hexadecimal representation.
+rgbToHex enables you to convert RGB (Red, Green, Blue) values to their corresponding 
+hexadecimal representation.
 
 ```
 const rgbToHex = (r, g, b) =>
