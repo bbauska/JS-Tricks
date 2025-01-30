@@ -72,10 +72,9 @@ code for the purpose.</p>
 ```
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 
-capitalize("follow for more")
+capitalize("follow for more")  // Result: Follow for more
 ```
 
-// Result: Follow for more
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>7. Find the number of days between two days</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -141,7 +140,7 @@ console.log(timeFromDate(new Date(2021, 0, 10, 17, 30, 0)));  // Result: "17:30:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>12. Check if a number is even or odd</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<P>A simple JavaScript function named "isEven" determines if a number is even or odd. It takes a 
+<p>A simple JavaScript function named "isEven" determines if a number is even or odd. It takes a 
 "num" as input and returns true if even, false if odd.</p>
 
 ```
