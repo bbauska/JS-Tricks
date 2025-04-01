@@ -1,7 +1,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of JS-Tricks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1><a id="toc">JS-Trickss: Table of Contents</a></h1>
+<h1><a id="toc">JS-Tricks: Table of Contents</a></h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="tricks">JS-Tricks</h2>
@@ -24,6 +24,25 @@
   <li><a href="#13">13) Find Average of Numbers</li>
   <li><a href="#14">14) Scroll to Top</li>
   <li><a href="#15">15) Reverse a string</li>
+  <li><a href="#16">16) Check if array is empty</li>
+  <li><a href="#17">17) Get Selected Text</li>
+  <li><a href="#18">18) Shuffle an Array</li>
+  <li><a href="#19">19) Detect Dark Mode</li>
+  <li><a href="#20">20) Remove Duplicated from Array</li>
+  <li><a href="#21">21) Get the Length of a String</li>
+  <li><a href="#22">22) Calculate the Area of a Circle</li>
+  <li><a href="#23">23) Check if a Number is Prime</li>
+  <li><a href="#24">24) Count Occurrences of a Character in a String</li>
+  <li><a href="#25">25) Remove Leading and Trailing</li>
+  <li><a href="#26">26) Generate a Random Number within a Range</li>
+  <li><a href="#27">27) Convert Seconds to HH:MM:SS Format</li>
+  <li><a href="#28">28) Get the Last Element of an Array</li>
+  <li><a href="#29">29) Sort an Array of Numbers in Ascending</li>
+  <li><a href="#30">30) Check if a String is Palindrome</li>
+  <li><a href="#31">31) Calculate Factorial of a Number</li>
+  <li><a href="#32">32) Sum all Numbers in an Array</li>
+  <li id="33"><a href="#33">33) Find the Maximum Value in an Array</li>
+  <li id="34"><a href="#34">34) Get the Current Date in DD/MM/YYYY</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="01">01) Get Value of a browser Cookie</h3>
@@ -61,6 +80,11 @@ const copyToClipboard = (text) =>
 copyToClipboard("Hello World");
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="04">04) Check if Date is Valid</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -436,8 +460,13 @@ const getCurrentDate = () => {
   return `${day}/${month}/${year}`;
 };
 
-getCurrentDate(); // Result: "mm/dd/20yy"
+getCurrentDate(); // Result: "dd/mm/20yy"
 ```
 
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="35">35) What is the output of the following tricky code?</h3>
-console.log(2 == [[[2]]]);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+console.log(2 == &lbrack;&lbrack;&lbrack;2&rbrack;&rbrack;&rbrack;);
+</pre>
