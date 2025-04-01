@@ -41,44 +41,43 @@
   <li><a href="#30">30) Check if a String is Palindrome</li>
   <li><a href="#31">31) Calculate Factorial of a Number</li>
   <li><a href="#32">32) Sum all Numbers in an Array</li>
-  <li id="33"><a href="#33">33) Find the Maximum Value in an Array</li>
-  <li id="34"><a href="#34">34) Get the Current Date in DD/MM/YYYY</li>
+  <li><a href="#33">33) Find the Maximum Value in an Array</li>
+  <li><a href="#34">34) Get the Current Date in DD/MM/YYYY</li>
+  <li><a href="#35">35-68) Examples of what is the output of the following tricky code?</h3>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="01">01) Get Value of a browser Cookie</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Retrieve the value of a cookie by accessing with <b>document.cookie</b>.</p>
 
-```
+<pre>
 const cookie = name => `; ${document.cookie}`.split(`; ${name} =`).pop().split(';').shift();
 
 cookie('_ga');  // Result: "GA1.2.1929736587.1601974046
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="02">02) Convert RGB to Hex</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>rgbToHex</b> enables you to convert RGB (Red, Green, Blue) values to their corresponding 
 hexadecimal representation.</p>
 
-```
+<pre>
 const rgbToHex = (r, g, b) =>
   "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 
 rgbToHex(0, 51, 255);  // Result: #0033ff
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="03">03) Copy to Clipboard</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Easily copy any text to clipboard using <b>navigator.clipboard.writeText</b>.</p>
 
-```
+</pre>
 const copyToClipboard = (text) =>
   navigator.clipboard.writeText(text);
 
 copyToClipboard("Hello World");
-```
+</pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -90,79 +89,78 @@ copyToClipboard("Hello World");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Use the following snippet to check if a given date is valid or not.</p>
 
-```
+<pre>
 const isDateValid = (...val) => !Number.isNaN(new
 Date(...val).valueOf());
 isDateValid("December 17, 1995 03:24:00");
 // Result: true
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="05">05) Find the day of year</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find which is the day by a given date.</p>
 
-```
+<pre>
 const dayOfYear = (date) =>
   Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
 dayOfYear(new Date()); // Result: 272
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>6. Capitalise a String</h3>
+<h3 id="06">6. Capitalise a String</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Javascript doesn't have an inbuilt capitalise function, so we can use the following 
 code for the purpose.</p>
 
-```
+<pre>
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 
 capitalize("follow for more")  // Result: Follow for more
-```
-
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>7. Find the number of days between two days</h3>
+<h3 id="07">7. Find the number of days between two days</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the days between 2 given days using the following snippet.</p>
 
-```
+<pre>
 const dayDif = (date1, date2) => 
   Math.ceil(Math.abs(date1.getTime() - date2.getTime()) / 86400000)
 
 dayDif(new Date("2020-10-21"), new Date("2021-10-22"))  // Result: 366
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>8. Clear All Cookies</h3>
+<h3 id="08">8. Clear All Cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can easily clear all cookies stored in a web page by accessing the cookie using 
 <b>document.cookie</b> and clearing it.</p>
 
-```
+<pre>
 const clearCookies = document.cookie.split(';').forEach(cookie =>
   document.cookie = cookie.replace(/^ +/, '').replace(/=.*/,`=;expires=${new Date(0).toUTCString()};path=/`));
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>9. Generate Random Hex</h3>
+<h3 id="09">9. Generate Random Hex</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can generate random hex colors with <b>Math.random</b> and <b>padEnd</b> properties.</p>
 
-```
+<pre>
 const randomHex = () => `#${Math.floor(Math.random() *
   0xffffff).toString(16).padEnd(6, "0")}`;
 
 console.log(randomHex());  // Result: #92b008
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>10. Get Query Params from URL</h3>
+<h3 id="10">10. Get Query Params from URL</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can easily retrieve query params from a url either by passing <b>window.location</b> 
 or the raw URL goole.com?search=easy&page=3</p>
 
-```
+<pre>
 const getParameters = (URL) => {
   URL = JSON.parse('{"' + decodeURI(URL.split("?")[1]).replace(/"/g, '\
   \"').replace(/&/g, '","').replace(/=/g, '":"') +'"}');
@@ -170,150 +168,137 @@ const getParameters = (URL) => {
 };
 
 getParameters(window.location)  // Result: { search : "easy", page : 3 }
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>11. Log Time from Date</h3>
+<h3 id="11">11. Log Time from Date</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>We can log time, in the format hour::minutes::seconds from a given date.</p>
 
-```
+<pre>
 const timeFromDate = date => date.toTimeString().slice(0, 8);
 
 console.log(timeFromDate(new Date(2021, 0, 10, 17, 30, 0)));  // Result: "17:30:00"
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>12. Check if a number is even or odd</h3>
+<h3 id="12">12. Check if a number is even or odd</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A simple JavaScript function named "isEven" determines if a number is even or odd. It takes a 
 "num" as input and returns true if even, false if odd.</p>
 
-```
+<pre>
 const isEven = num => num % 2 === 0;
 
 console.log(isEven(2));  // Result: True
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>13. Find Average of Numbers</h3>
+<h3 id="13">13. Find Average of Numbers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the average between multiple numbers using reduce method.</p>
 
-```
+<pre>
 const average = (...args) => args.reduce((a, b) => a + b) / args.length;
 
 average(1, 2, 3, 4);  // Result: 2.5
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>14. Scroll to Top</h3>
+<h3 id="14">14. Scroll to Top</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can use <b>window.scrollTo(0, 0)</b> method to automatic scroll to top.
 Set both x and y as 0.</p>
 
-```
+<pre>
 const goToTop = () => window.scrollTo(0, 0);
 
 goToTop();
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>15. Reverse a string</h3>
+<h3 id="15">15. Reverse a string</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can easily reverse a string using <b>split, reverse</b> and <b>join</b> methods.</p>
 
-```
+<pre>
 const reverse = str => str.split('').reverse().join('');
 
 reverse('hello world');  // Result: 'dlrow olleh'
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>16. Check if array is empty</h3>
+<h3 id="16">16. Check if array is empty</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can check if an array if empty with this snippet.</p>
 
-```
+<pre>
 const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
 
 isNotEmpty([1, 2, 3]);  // Result: true
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>17. Get Selected Text</h3>
+<h3 id="17">17. Get Selected Text</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the text the user has select using inbuilt <b>getSelection</b> property.</p>
 
-```
+<pre>
 const getSelectedText = () => window.getSelection().toString();
 
 getSelectedText();
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>18. Shuffle an Array</h3>
+<h3 id="18">18. Shuffle an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Shuffling an array is super easy with <b>sort</b> and <b>random</b> methods.</p>
 
-```
+<pre>
 const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
 
 console.log(shuffleArray([1, 2, 3, 4]));  // Result: [ 1, 4, 3, 2 ]
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>19. Detect Dark Mode</h3>
+<h3 id="19">19. Detect Dark Mode</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a user's device is in dark mode with the following code.</p>
 
-```
+<pre>
 const isDarkMode = window.matchMedia &&
   window.matchMedia('(prefers-color-scheme: dark)').matches
 
 console.log(isDarkMode) // Result: True or False
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>20. Remove Duplicated from Array</h3>
+<h3 id="20">20. Remove Duplicated from Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <Mp>You can easily remove duplicates with <b>Set</b> in JavaScript. Its a life saver.</p>
 
-```
+<pre>
 const removeDuplicates = (arr) => [...new Set(arr)];
 
 console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6]));  // Result: [ 1, 2, 3, 4, 5, 6 ]
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>21. Get the Length of a String</h3>
+<h3 id="21">21. Get the Length of a String</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>getLength</b> efficiently calculates the length of a given string using <b>.length</b> 
 property.</p>
 
-```
+<pre>
 const getLength = (str) => str.length;
 
 getLength("Hello, world!");  // Result: 13
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>22. Calculate the Area of a Circle</h3>
+<h3 id="22">22. Calculate the Area of a Circle</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a circle given its <b>radius</b>.</p>
 
-```
+<pre>
 const calculateCircleArea = (radius) => Math.PI * Math.pow(radius, 2);
 
 calculateCircleArea(5);  // Result: 78.53981633974483
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>23. Check if a Number is Prime</h3>
+<h3 id="23">23. Check if a Number is Prime</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Determine if a given number is a prime number.</p>
 
-```
+<pre>
 const isPrime = (num) => {
   if (num <= 1) return false;
   for (let i = 2; i <= Math.sqrt(num); i++) {
@@ -323,48 +308,44 @@ const isPrime = (num) => {
 };
 
 isPrime(13);  // Result: true
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>24. Count Occurrences of a Character in a String</h3>
+<h3 id="24">24. Count Occurrences of a Character in a String</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Count the occurrences of a specific character in a given string.</p>
 
-```
+<pre>
 const countOccurrences = (str, char) => str.split(char).length - 1;
 
 countOccurrences("banana", "a");  // Result: 3
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>25. Remove Leading and Trailing</h3>
+<h3 id="25">25. Remove Leading and Trailing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Whitespaces</h4>
 <p>Remove leading and trailing whitespaces from a given string.</p>
 
-```
+<pre>
 const removeWhitespaces = (str) => str.trim();
 
 removeWhitespaces(" Hello, world! ");  // Result: "Hello, world!"
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>26. Generate a Random Number within a Range</h3>
+<h3 id="26">26. Generate a Random Number within a Range</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate a random integer within a specified range.</p>
 
-```
+<pre>
 const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 randomInRange(1, 10);  // Result: Random number between 1 and 10 (inclusive)
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>27. Convert Seconds to HH:MM:SS Format</h3>
+<h3 id="27">27. Convert Seconds to HH:MM:SS Format</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given number of seconds into the "hours:minutes:seconds" format.</p>
 
-```
+<pre>
 const secondsToHHMMSS = (seconds) => {
   const pad = (num) => String(num).padStart(2, '0');
   const hours = Math.floor(seconds / 3600);
@@ -374,78 +355,71 @@ const secondsToHHMMSS = (seconds) => {
 };
 
 secondsToHHMMSS(3660); // Result: "01:01:00"
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>28. Get the Last Element of an Array</h3>
+<h3 id="28">28. Get the Last Element of an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Retrieve the last element of a given array.</p>
 
-```
+<pre>
 const getLastElement = (arr) => arr[arr.length - 1];
 
 getLastElement([1, 2, 3, 4]);  // Result: 4
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>29. Sort an Array of Numbers in Ascending</h3>
+<h3 id="29">29. Sort an Array of Numbers in Ascending</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Order</h4>
 <p>Sort a given array of numbers in ascending order.</p>
 
-```
+<pre>
 const sortAscending = (arr) => arr.slice().sort((a, b) => a - b);
 
 sortAscending([3, 1, 4, 1, 5, 9, 2, 6, 5, 3]);  // Result: [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>30. Check if a String is Palindrome</h3>
+<h3 id="30">30. Check if a String is Palindrome</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Determine if a given string is a palindrome.</p>
 
-```
+<pre>
 const isPalindrome = (str) => str === str.split('').reverse().join('');
 
 isPalindrome("level");  // Result: true
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>31. Calculate Factorial of a Number</h3>
+<h3 id="31">31. Calculate Factorial of a Number</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the factorial of a given number.</p>
 
-```
+<pre>
 const factorial = (num) => {
   if (num === 0 || num === 1) return 1;
   return num * factorial(num - 1);
 };
 
 factorial(5);  // Result: 120
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>32. Sum all Numbers in an Array</h3>
+<h3 id="32">32. Sum all Numbers in an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of all numbers in a given array.</p>
 
-```
+<pre>
 const sumArray = (arr) => arr.reduce((acc, val) => acc + val, 0);
 
 sumArray([1, 2, 3, 4, 5]);  // Result: 15
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="33">33. Find the Maximum Value in an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the maximum value in a given array of numbers.</p>
 
-```
+<pre>
 const findMax = (arr) => Math.max(...arr);
 
 findMax([10, 5, 8, 20, 15, 12, 1, 3]);  // Result: 20
-```
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="34">34) Get the Current Date in DD/MM/YYYY</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
