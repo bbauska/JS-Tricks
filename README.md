@@ -1,10 +1,32 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1 id="tricks">JS-Tricks</h1>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of JS-Tricks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript tips, tricks, techniques.  ES6 or greater. Chrome predominantly.</p>
-<h2></h2>
+<h1><a id="toc">JS-Trickss: Table of Contents</a></h1>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>1. Get Value of a browser Cookie</h3>
+<h2 id="tricks">JS-Tricks</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>50+ JavaScript tips, tricks, techniques.  ES6 or greater. Chrome predominantly.</p>
+
+<ul>
+  <li><a href="#01">01) Get value of a browser cookie</a>,</li>
+  <li><a href="#02">02) Convert RGB to Hex</a>,</li>
+  <li><a href="#03">03) Copy to clipboard</a>,</li>
+  <li><a href="#04">04) Check if Date is Valid</li>
+  <li><a href="#05">05) Find the day of year</li>
+  <li><a href="#06">06) Capitalise a String</li>
+  <li><a href="#07">07) Find the number of days between two days</li>
+  <li><a href="#08">08) Clear All Cookies</li>
+  <li><a href="#09">09) Generate Random Hex</li>
+  <li><a href="#10">10) Get Query Params from URL</li>
+  <li><a href="#11">11) Log Time from Date</li>
+  <li><a href="#12">12) Check if a number is even or odd</li>
+  <li><a href="#13">13) Find Average of Numbers</li>
+  <li><a href="#14">14) Scroll to Top</li>
+  <li><a href="#15">15) Reverse a string</li>
+</ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="01">01) Get Value of a browser Cookie</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Retrieve the value of a cookie by accessing with <b>document.cookie</b>.</p>
 
@@ -15,7 +37,7 @@ cookie('_ga');  // Result: "GA1.2.1929736587.1601974046
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>2. Convert RGB to Hex</h3>
+<h3 id="02">02) Convert RGB to Hex</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>rgbToHex</b> enables you to convert RGB (Red, Green, Blue) values to their corresponding 
 hexadecimal representation.</p>
@@ -28,7 +50,7 @@ rgbToHex(0, 51, 255);  // Result: #0033ff
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>3. Copy to Clipboard</h3>
+<h3 id="03">03) Copy to Clipboard</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Easily copy any text to clipboard using <b>navigator.clipboard.writeText</b>.</p>
 
@@ -40,7 +62,7 @@ copyToClipboard("Hello World");
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>4. Check if Date is Valid</h3>
+<h3 id="04">04) Check if Date is Valid</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Use the following snippet to check if a given date is valid or not.</p>
 
@@ -52,7 +74,7 @@ isDateValid("December 17, 1995 03:24:00");
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>5. Find the day of year</h3>
+<h3 id="05">05) Find the day of year</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find which is the day by a given date.</p>
 
@@ -390,18 +412,18 @@ sumArray([1, 2, 3, 4, 5]);  // Result: 15
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>33. Find the Maximum Value in an Array</h3>
+<h3 id="33">33. Find the Maximum Value in an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the maximum value in a given array of numbers.</p>
 
 ```
 const findMax = (arr) => Math.max(...arr);
 
-findMax([10, 5, 8, 20, 3]);  // Result: 20
+findMax([10, 5, 8, 20, 15, 12, 1, 3]);  // Result: 20
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>34. Get the Current Date in DD/MM/YYYY</h3>
+<h3 id="34">34) Get the Current Date in DD/MM/YYYY</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the current date in the "DD/MM/YYYY" format.</p>
 
@@ -414,5 +436,8 @@ const getCurrentDate = () => {
   return `${day}/${month}/${year}`;
 };
 
-getCurrentDate(); // Result: "1/29/2025"
+getCurrentDate(); // Result: "mm/dd/20yy"
 ```
+
+<h3 id="35">35) What is the output of the following tricky code?</h3>
+console.log(2 == [[[2]]]);
