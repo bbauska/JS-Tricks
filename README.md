@@ -67,6 +67,7 @@ function setCookie(cname, cvalue, exdays) {
 </pre>
 <h4>Get Cookie</h4>
 <p>A Function to Get a Cookie.</p>
+<pre>
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(';');
