@@ -43,6 +43,10 @@
   <li><a href="#33">33) Find the Maximum Value in an Array</a></li>
   <li><a href="#34">34) Get the Current Date in DD/MM/YYYY</a></li>
   <li><a href="#35">35-68) Examples of what is the output of the following tricky code?</a></li>
+  <li><a href="#69">69-88) 20 More Tricks with JS</a></li>
+<!--  <li><a href="#69">69) Destructuring Magic: Extract Values with Ease</a></li>  -->
+<!--  <li><a href="#70">70) Spread the Love: Clone Arrays and Merge Objects</a></li>  -->
+<!--  <li><a href="#88">88) Proxies: Beyond Objects</a></li>  -->
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="01">01) Get/Set/Check Value of a browser Cookie</h3>
