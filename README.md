@@ -9,13 +9,13 @@
 <p>50+ JavaScript tips, tricks, techniques.  ES6 or greater. Chrome predominantly.</p>
 
 <ul>
-  <li><a href="#01">01) Get value of a browser cookie</a>,</li>
+  <li><a href="#01">01) Get/Set/Check value of a browser cookie</a>,</li>
   <li><a href="#02">02) Convert RGB to Hex</a>,</li>
   <li><a href="#03">03) Copy to clipboard</a>,</li>
-  <li><a href="#04">04) Check if Date is Valid</li>
-  <li><a href="#05">05) Find the day of year</li>
-  <li><a href="#06">06) Capitalise a String</li>
-  <li><a href="#07">07) Find the number of days between two days</li>
+  <li><a href="#04">04) Check if Date is Valid</a>,</li>
+  <li><a href="#05">05) Find the day of year</a>,</li>
+  <li><a href="#06">06) Capitalise a String</a>,</li>
+  <li><a href="#07">07) Find the number of days between two days</a>,</li>
   <li><a href="#08">08) Clear All Cookies</li>
   <li><a href="#09">09) Generate Random Hex</li>
   <li><a href="#10">10) Get Query Params from URL</li>
@@ -46,7 +46,7 @@
   <li><a href="#35">35-68) Examples of what is the output of the following tricky code?</h3>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="01">01) Get Value of a browser Cookie</h3>
+<h3 id="01">01) Get/Set/Check Value of a browser Cookie</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Retrieve the value of a cookie by accessing with <b>document.cookie</b>.</p>
 
@@ -83,7 +83,9 @@ function getCookie(cname) {
   return "";
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Check Cookie</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>If the cookie is not set, it will display a prompt box, asking for the name of the user, and stores the username cookie for 365 days, by calling the setCookie function:</p>
 <pre>
 function checkCookie() {
@@ -98,7 +100,9 @@ function checkCookie() {
   }
 }
 </pre>
-<h4>More Cookie</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Another Cookie</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function createCookie(name, value, days) {
     var expires;
@@ -112,7 +116,6 @@ function createCookie(name, value, days) {
     }
     document.cookie = name + "=" + value + expires + "; path=/";
 }
-
 function getCookie(c_name) {
     if (document.cookie.length > 0) {
         c_start = document.cookie.indexOf(c_name + "=");
