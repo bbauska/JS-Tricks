@@ -147,7 +147,7 @@ rgbToHex(0, 51, 255);  // Result: #0033ff
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Easily copy any text to clipboard using <b>navigator.clipboard.writeText</b>.</p>
 
-</pre>
+<pre>
 const copyToClipboard = (text) =>
   navigator.clipboard.writeText(text);
 
