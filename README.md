@@ -912,17 +912,261 @@ unexpected results.
 
 <pre>console.log(typeof []);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="69">69) ?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
+<p>JavaScript, the language that makes websites interactive, has some amazing tricks up its 
+sleeve that can make your coding journey smoother and more enjoyable. In this post, we'll 
+explore 20 JavaScript tips and tricks, each explained with easy-to-understand examples. 
+Let's dive in and level up your JavaScript skills!</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="69">69. Destructuring Magic: Extract Values with Ease</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Destructuring allows you to unpack values from arrays or objects in a breeze. Here's an example:</p>
 <pre>
-
+const person = { name: 'Alice’, age: 30 };
+const { name, age } = person;
+console.log(name); // Output: Alice
+console.log(age); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="70">70) What is the output of the following tricky code?</h3>
+<h3 id="70">70. Spread the Love: Clone Arrays and Merge Objects</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The spread operator (`...`) lets you create copies of arrays and merge objects effortlessly:</p>
+<pre>
+const originalArray = [1, 2, 3];
+const clonedArray = [...originalArray];
+console.log(clonedArray); // Output: [1, 2, 3]
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Merging objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const merged = { ...obj1, ...obj2 };
+console.log(merged); // Output: { a: 1, b: 3, c: 4 }
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="71">71. The Power of `map()`: Transform with Ease</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The `map()` method is your secret weapon for transforming data:</p>
+<pre>
+const numbers = [1, 2, 3];
+const squared = numbers.map(num => num * num);
+console.log(squared); // Output: [1, 4, 9]
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="72">72. Short-circuit with `&&` and `||`: Elegant Conditionals</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Use `&&` and `||` to create clean and concise conditionals:</p>
+<pre>
+const name = user.name || `Guest`;
+console.log(name); // Output: Guest
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="73">73. Chaining `setTimeout()`: Sequencing Delays</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Chaining `setTimeout()` creates a sequence of delayed actions:</p>
+<pre>
+function delayedLog(message, time) {
+  setTimeout(() => {
+    console.log(message);
+  }, time);
+}
+delayedLog('Hello', 1000); // Output (after 1 second): Hello
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="74">74. Arrow Functions: Concise and Powerful</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Arrow functions (`() => {}`) are not only concise, but they also preserve the value of `this`:</p>
+<pre>
+const greet = name => `Hello, ${name}!`;
+console.log(greet(`Alice`)); // Output: Hello, Alice!
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="75">75. Mastering `Promise.all()`: Handle Multiple Promises</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Combine multiple promises and handle them collectively using `Promise.all()`:</p>
+<pre>
+const promise1 = fetch('url1');
+const promise2 = fetch('url2');
+Promise.all([promise1, promise2])
+  .then(responses => console.log(responses))
+  .catch(error => console.error(error));
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="76">76. Dynamic Property Names: Versatile Object Keys</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You can use variables as object property names using square brackets:</p>
+
+<pre>
+const key = 'name';
+const person = { [key]: 'Alice' };
+console.log(person.name); // Output: Alice
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="77">77. Template Literals Magic: String Formatting</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Template literals (`${}`) allow you to embed expressions in strings:</p>
+
+<pre>
+const name = 'Alice';
+const greeting = `Hello, ${name}!`;
+console.log(greeting); // Output: Hello, Alice!
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="78">78. NaN Checking: A Safer Alternative</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Use `Number.isNaN()` to accurately check if a value is NaN:</p>
+
+<pre>
+const notANumber = 'Not a number';
+console.log(Number.isNaN(notANumber)); // Output: false
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="79">79. Optional Chaining (`?.`): Tame Undefined Values</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Avoid errors with optional chaining when dealing with nested properties:</p>
+
+<pre>
+const user = { info: { name: 'Alice' } };
+console.log(user.info?.age); // Output: undefined
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="80">80. Regex Revival: Mastering Patterns</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Regular expressions (`RegExp`) are powerful tools for pattern matching:</p>
+
+<pre>
+const text = 'Hello, world!';
+const pattern = /Hello/g;
+console.log(text.match(pattern)); // Output: ['Hello']
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="81">81. JSON.parse() Reviver: Transform Parsed Data</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The `reviver` parameter in `JSON.parse()` lets you transform parsed JSON:</p>
+
+<pre>
+const data = '{"age":"30"}';
+const parsed = JSON.parse(data, (key, value) => {
+  if (key === 'age') return Number(value);
+  return value;
+});
+console.log(parsed.age); // Output: 30
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="82">82. Cool Console Tricks: Debugging Delights</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Go beyond `console.log()` with `console.table()` and `console.groupCollapsed()`:</p>
+
+<pre>
+const users = [{ name: 'Alice' }, { name: 'Bob' }];
+console.table(users);
+console.groupCollapsed(’Details’);
+console.log(’Name: Alice’);
+console.log(’Age: 30’);
+console.groupEnd();
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="83">83. Fetch with `async`/`await`: Asynchronous Simplicity</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>`async`/`await` with `fetch()` simplifies handling asynchronous requests:</p>
+<pre>
+async function fetchData() {
+  try {
+    const response = await fetch('url');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchData();
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="84">84. Closures Unleashed: Data Privacy</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Closures let you create private variables in functions:</p>
+<pre>
+function createCounter() {
+  let count = 0;
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = createCounter();
+counter(); // Output: 1
+counter(); // Output: 2
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="85">85. Memoization for Speed: Efficient Recalculation</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Memoization caches function results for improved performance:</p>
+
+<pre>
+function fibonacci(n, memo = {}) {
+  if (n in memo) return memo[n];
+  if (n <= 2) return 1;
+  memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+  return memo[n];
+}
+
+console.log(fibonacci(10)); // Output: 55
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="86">86. Hail the Intersection Observer: Effortless Scroll Effects</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Use the Intersection Observer API for lazy loading and scroll animations:</p>
+<pre>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+const elements = document.querySelectorAll('.animate');
+elements.forEach(element => observer.observe(element));
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="87">87. ES6 (POS) Modules for Clean Code: Organized and Modular</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Use ES6 modules for clean, modular code:</p>
+<pre>
+// math.js
+export function add(a, b) {
+  return a + b;
+}
+
+// app.js
+import { add } from './math.js';
+console.log(add(2, 3)); // Output: 5
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="88">88. Proxies: Beyond Objects</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Proxies allow you to intercept and customize object operations:</p>
+
+<pre>
+const handler = {
+  get(target, prop) {
+    return `Property "${prop}" doesn't exist.`;
+  }
+};
+
+const proxy = new Proxy({}, handler);
+console.log(proxy.name); // Output: Property "name" doesn’t exist.
+</pre>
+<p>With these last 20 JavaScript tips and tricks in your toolkit, you're well-equipped to take 
+your coding skills to the next level. Keep exploring, experimenting, and building 
+amazing things with JavaScript!</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="89">89) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 
