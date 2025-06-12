@@ -7,43 +7,42 @@
 <h2 id="tricks">JS-Tricks</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>50+ JavaScript tips, tricks, techniques.  ES6 or greater. Chrome predominantly.</p>
-
 <ul>
-  <li><a href="#01">01) Get/Set/Check value of a browser cookie</a>,</li>
-  <li><a href="#02">02) Convert RGB to Hex</a>,</li>
-  <li><a href="#03">03) Copy to clipboard</a>,</li>
-  <li><a href="#04">04) Check if Date is Valid</a>,</li>
-  <li><a href="#05">05) Find the day of year</a>,</li>
-  <li><a href="#06">06) Capitalise a String</a>,</li>
-  <li><a href="#07">07) Find the number of days between two days</a>,</li>
-  <li><a href="#08">08) Clear All Cookies</li>
-  <li><a href="#09">09) Generate Random Hex</li>
-  <li><a href="#10">10) Get Query Params from URL</li>
-  <li><a href="#11">11) Log Time from Date</li>
-  <li><a href="#12">12) Check if a number is even or odd</li>
-  <li><a href="#13">13) Find Average of Numbers</li>
-  <li><a href="#14">14) Scroll to Top</li>
-  <li><a href="#15">15) Reverse a string</li>
-  <li><a href="#16">16) Check if array is empty</li>
-  <li><a href="#17">17) Get Selected Text</li>
-  <li><a href="#18">18) Shuffle an Array</li>
-  <li><a href="#19">19) Detect Dark Mode</li>
-  <li><a href="#20">20) Remove Duplicated from Array</li>
-  <li><a href="#21">21) Get the Length of a String</li>
-  <li><a href="#22">22) Calculate the Area of a Circle</li>
-  <li><a href="#23">23) Check if a Number is Prime</li>
-  <li><a href="#24">24) Count Occurrences of a Character in a String</li>
-  <li><a href="#25">25) Remove Leading and Trailing</li>
-  <li><a href="#26">26) Generate a Random Number within a Range</li>
-  <li><a href="#27">27) Convert Seconds to HH:MM:SS Format</li>
-  <li><a href="#28">28) Get the Last Element of an Array</li>
-  <li><a href="#29">29) Sort an Array of Numbers in Ascending</li>
-  <li><a href="#30">30) Check if a String is Palindrome</li>
-  <li><a href="#31">31) Calculate Factorial of a Number</li>
-  <li><a href="#32">32) Sum all Numbers in an Array</li>
-  <li><a href="#33">33) Find the Maximum Value in an Array</li>
-  <li><a href="#34">34) Get the Current Date in DD/MM/YYYY</li>
-  <li><a href="#35">35-68) Examples of what is the output of the following tricky code?</h3>
+  <li><a href="#01">01) Get/Set/Check value of a browser cookie</a></li>
+  <li><a href="#02">02) Convert RGB to Hex</a></li>
+  <li><a href="#03">03) Copy to clipboard</a></li>
+  <li><a href="#04">04) Check if Date is Valid</a></li>
+  <li><a href="#05">05) Find the day of year</a></li>
+  <li><a href="#06">06) Capitalize a String</a></li>
+  <li><a href="#07">07) Find the number of days between two days</a></li>
+  <li><a href="#08">08) Clear All Cookies</a></li>
+  <li><a href="#09">09) Generate Random Hex</a></li>
+  <li><a href="#10">10) Get Query Params from URL</a></li>
+  <li><a href="#11">11) Log Time from Date</a></li>
+  <li><a href="#12">12) Check if a number is even or odd</a></li>
+  <li><a href="#13">13) Find Average of Numbers</a></li>
+  <li><a href="#14">14) Scroll to Top</a></li>
+  <li><a href="#15">15) Reverse a string</a></li>
+  <li><a href="#16">16) Check if array is empty</a></li>
+  <li><a href="#17">17) Get Selected Text</a></li>
+  <li><a href="#18">18) Shuffle an Array</a></li>
+  <li><a href="#19">19) Detect Dark Mode</a></li>
+  <li><a href="#20">20) Remove Duplicated from Array</a></li>
+  <li><a href="#21">21) Get the Length of a String</a></li>
+  <li><a href="#22">22) Calculate the Area of a Circle</a></li>
+  <li><a href="#23">23) Check if a Number is Prime</a></li>
+  <li><a href="#24">24) Count Occurrences of a Character in a String</a></li>
+  <li><a href="#25">25) Remove Leading and Trailing</a></li>
+  <li><a href="#26">26) Generate a Random Number within a Range</a></li>
+  <li><a href="#27">27) Convert Seconds to HH:MM:SS Format</a></li>
+  <li><a href="#28">28) Get the Last Element of an Array</a></li>
+  <li><a href="#29">29) Sort an Array of Numbers in Ascending</a></li>
+  <li><a href="#30">30) Check if a String is Palindrome</a></li>
+  <li><a href="#31">31) Calculate Factorial of a Number</a></li>
+  <li><a href="#32">32) Sum all Numbers in an Array</a></li>
+  <li><a href="#33">33) Find the Maximum Value in an Array</a></li>
+  <li><a href="#34">34) Get the Current Date in DD/MM/YYYY</a></li>
+  <li><a href="#35">35-68) Examples of what is the output of the following tricky code?</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="01">01) Get/Set/Check Value of a browser Cookie</h3>
@@ -877,9 +876,7 @@ console.log('2' + 2);
 starting at a specified index.
 </p>
 
-<pre>
-console.log('foo'.substring(1));
-</pre>
+<pre>console.log('foo'.substring(1));</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="66">66) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -888,9 +885,7 @@ console.log('foo'.substring(1));
 index in a string.
 </p>
 
-<pre>
-console.log('foo'.charAt(1));
-</pre>
+<pre>console.log('foo'.charAt(1));</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
@@ -909,17 +904,13 @@ is passed as the second argument to parseInt(), causing
 unexpected results.
 </p>
 
-<pre>
-console.log([1, 2, 3].map(parseInt));
-</pre>
+<pre>console.log([1, 2, 3].map(parseInt));</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="68">68) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>"object". Arrays are a subtype of objects in JavaScript.</p>
 
-<pre>
-console.log(typeof []);
-</pre>
+<pre>console.log(typeof []);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="69">69) ?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -931,7 +922,7 @@ console.log(typeof []);
 
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="70">70) ?</h3>
+<h3 id="70">70) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 
@@ -940,109 +931,3 @@ console.log(typeof []);
 <pre>
 
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="71">71) ?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
-</div>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="72">72) ?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="73">73) ?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="74">74) ?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="75">75) ?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="76">76) ?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="77">77) What is the output of the following tricky code?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="78">78) What is the output of the following tricky code?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="79">79) What is the output of the following tricky code?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="80">80) What is the output of the following tricky code?</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-
-</p>
-
-<pre>
-
-</pre>
-
