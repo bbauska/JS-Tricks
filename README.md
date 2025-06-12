@@ -55,6 +55,8 @@ const cookie = name => `; ${document.cookie}`.split(`; ${name} =`).pop().split('
 
 cookie('_ga');  // Result: "GA1.2.1929736587.1601974046
 </pre>
+<h4>Set Cookie</h4>
+<p>Create a function that stores the name of the visitor in a cookie variable:</p>
 <pre>
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
@@ -62,7 +64,9 @@ function setCookie(cname, cvalue, exdays) {
   let expires = "expires="+d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
+</pre>
+<h4>Get Cookie</h4>
+<p>A Function to Get a Cookie.</p>
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(';');
@@ -77,7 +81,10 @@ function getCookie(cname) {
   }
   return "";
 }
-
+</pre>
+<h4>Check Cookie</h4>
+<p>If the cookie is not set, it will display a prompt box, asking for the name of the user, and stores the username cookie for 365 days, by calling the setCookie function:</p>
+<pre>
 function checkCookie() {
   let user = getCookie("username");
   if (user != "") {
