@@ -32,25 +32,25 @@
   <title>Coding Templates</title>
   <link rel="canonical" href="https://js-tricks.bauska.org">
   <link rel="stylesheet" href="./css/styles.css">
-<!-- images -->
-<link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images//apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images//apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images//apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images//apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images//apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images//apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images//apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images//apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images//android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
 
+  <!-- images, manifest, themes -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images//apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images//apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images//apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images//apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images//apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images//apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images//apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images//apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/images//android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -74,13 +74,11 @@
 
   // <i>when the user clicks on the button, scroll to the table of contents near top of document.</i>
   function topFunction() {
-    document.getElementById('table-of-contents').scrollIntoView();
+    document.getElementById('toc').scrollIntoView();
   }
 
   </script>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ index.html of js-tricks.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1><a id="toc">JS-Tricks: Table of Contents</a></h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -436,7 +434,7 @@ const getLastElement = (arr) => arr[arr.length - 1];
 getLastElement([1, 2, 3, 4]);  // Result: 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="29">29. Sort an Array of Numbers in Ascending</h3>
+<h3 id="29">29. Sort an Array of Numbers in Ascending Order</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Order</h4>
 <p>Sort a given array of numbers in ascending order.</p>
@@ -510,6 +508,7 @@ getCurrentDate(); // Result: "dd/mm/20yy"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>true. This is because the == operator performs type coercion, and all operands are coerced to 
 the same value before comparison.</p>
+
 <pre>
 console.log(2 == &lbrack;&lbrack;&lbrack;2&rbrack;&rbrack;&rbrack;);  // Result: true
 </pre>
@@ -518,6 +517,7 @@ console.log(2 == &lbrack;&lbrack;&lbrack;2&rbrack;&rbrack;&rbrack;);  // Result:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>"object". This is because null is a primitive value in JavaScript,
 but typeof null returns "object" because of a historical mistake.</p>
+
 <pre>
 console.log(typeof null);
 </pre>
@@ -533,6 +533,7 @@ console.log(0.1 + 0.2 === 0.3);
 <h3 id="38">38) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>false. This is because NaN is not equal to any value, including itself.</p>
+
 <pre>
 console.log(NaN === NaN);
 </pre>
@@ -540,6 +541,7 @@ console.log(NaN === NaN);
 <h3 id="39">39) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>-0. The unary plus operator (+) converts its operand to a number.</p>
+
 <pre>
 console.log(+'-0');
 </pre>
@@ -590,10 +592,7 @@ console.log(1 + 2 + "3");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="45">45) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-1. The - operator performs arithmetic subtraction when both
-operands are numbers.
-</p>
+<p>1. The - operator performs arithmetic subtraction when both operands are numbers.</p>
 
 <pre>
 console.log('2' - 1);
@@ -601,10 +600,8 @@ console.log('2' - 1);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="46">46) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-"string". The typeof operator always returns a string, even
-when applied to another typeof expression.
-</p>
+<p>"string". The typeof operator always returns a string, even when applied to another 
+typeof expression.</p>
 
 <pre>
 console.log(typeof typeof 42);
@@ -612,10 +609,8 @@ console.log(typeof typeof 42);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="47">47) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-true. This is because an empty array coerces to 0, and the ==
-operator performs type coercion before comparison.
-</p>
+<p>true. This is because an empty array coerces to 0, and the == operator performs type 
+coercion before comparison.</p>
 
 <pre>
 console.log([] == 0);
@@ -623,10 +618,7 @@ console.log([] == 0);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="48">48) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-"h". The charAt() method returns the character at the specified
-index in a string.
-</p>
+<p>"h". The charAt() method returns the character at the specified index in a string.</p>
 
 <pre>
 console.log('hello'.charAt(0));
@@ -634,11 +626,8 @@ console.log('hello'.charAt(0));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="49">49) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-true. This is because the ! operator coerces an empty array to
-a truthy value (false), which is then coerced to 0, and an
-empty array coerces to 0, which are equal.
-</p>
+<p>true. This is because the ! operator coerces an empty array to a truthy value (false), 
+which is then coerced to 0, and an empty array coerces to 0, which are equal.</p>
 
 <pre>
 console.log([] == ![]);
@@ -775,10 +764,7 @@ console.log(typeof NaN);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="64">64) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-"22". The + operator performs string concatenation when one
-or both operands are strings.
-</p>
+<p>"22". The + operator performs string concatenation when one or both operands are strings.</p>
 
 <pre>
 console.log('2' + 2);
@@ -786,10 +772,7 @@ console.log('2' + 2);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="65">65) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-"oo". The substring() method returns a substring of a string
-starting at a specified index.
-</p>
+<p>"oo". The substring() method returns a substring of a string starting at a specified index.</p>
 
 <pre>
 console.log('foo'.substring(1));
@@ -797,10 +780,7 @@ console.log('foo'.substring(1));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="66">66) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-"o". The charAt() method returns the character at a specified
-index in a string.
-</p>
+<p>"o". The charAt() method returns the character at a specified index in a string.</p>
 
 <pre>
 console.log('foo'.charAt(1));
@@ -808,15 +788,11 @@ console.log('foo'.charAt(1));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="67">67) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-[1, NaN, NaN]. The map() method passes three arguments to
-the callback function: the current element, the index of the
-element, and the original array. The parseInt() function
-expects two arguments: the string to be parsed, and the radix
-(base) of the number system to be used. The index argument
-is passed as the second argument to parseInt(), causing
-unexpected results.
-</p>
+<p>[1, NaN, NaN]. The map() method passes three arguments to the callback function: the 
+current element, the index of the element, and the original array. The parseInt() function
+expects two arguments: the string to be parsed, and the radix (base) of the number system 
+to be used. The index argument is passed as the second argument to parseInt(), causing
+unexpected results.</p>
 
 <pre>
 console.log([1, 2, 3].map(parseInt));
@@ -950,3 +926,5 @@ console.log(typeof []);
 
 </pre>
 
+</body>
+</html>
