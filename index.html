@@ -85,44 +85,44 @@
 <h2 id="tricks">JS-Tricks</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>50+ JavaScript tips, tricks, techniques.  ES6 or greater. Chrome predominantly.</p>
-
+<h3>
 <ul>
   <li><a href="#01">01) Get value of a browser cookie</a>,</li>
   <li><a href="#02">02) Convert RGB to Hex</a>,</li>
   <li><a href="#03">03) Copy to clipboard</a>,</li>
-  <li><a href="#04">04) Check if Date is Valid</li>
-  <li><a href="#05">05) Find the day of year</li>
-  <li><a href="#06">06) Capitalise a String</li>
-  <li><a href="#07">07) Find the number of days between two days</li>
-  <li><a href="#08">08) Clear All Cookies</li>
-  <li><a href="#09">09) Generate Random Hex</li>
-  <li><a href="#10">10) Get Query Params from URL</li>
-  <li><a href="#11">11) Log Time from Date</li>
-  <li><a href="#12">12) Check if a number is even or odd</li>
-  <li><a href="#13">13) Find Average of Numbers</li>
-  <li><a href="#14">14) Scroll to Top</li>
-  <li><a href="#15">15) Reverse a string</li>
-  <li><a href="#16">16) Check if array is empty</li>
-  <li><a href="#17">17) Get Selected Text</li>
-  <li><a href="#18">18) Shuffle an Array</li>
-  <li><a href="#19">19) Detect Dark Mode</li>
-  <li><a href="#20">20) Remove Duplicated from Array</li>
-  <li><a href="#21">21) Get the Length of a String</li>
-  <li><a href="#22">22) Calculate the Area of a Circle</li>
-  <li><a href="#23">23) Check if a Number is Prime</li>
-  <li><a href="#24">24) Count Occurrences of a Character in a String</li>
-  <li><a href="#25">25) Remove Leading and Trailing</li>
-  <li><a href="#26">26) Generate a Random Number within a Range</li>
-  <li><a href="#27">27) Convert Seconds to HH:MM:SS Format</li>
-  <li><a href="#28">28) Get the Last Element of an Array</li>
-  <li><a href="#29">29) Sort an Array of Numbers in Ascending</li>
-  <li><a href="#30">30) Check if a String is Palindrome</li>
-  <li><a href="#31">31) Calculate Factorial of a Number</li>
-  <li><a href="#32">32) Sum all Numbers in an Array</li>
-  <li><a href="#33">33) Find the Maximum Value in an Array</li>
-  <li><a href="#34">34) Get the Current Date in DD/MM/YYYY</li>
-  <li><a href="#35">35-68) Examples of what is the output of the following tricky code?</h3>
-</ul>
+  <li><a href="#04">04) Check if Date is Valid</a>,</li>
+  <li><a href="#05">05) Find the day of year</a>,</li>
+  <li><a href="#06">06) Capitalise a String</a>,</li>
+  <li><a href="#07">07) Find the number of days between two days</a>,</li>
+  <li><a href="#08">08) Clear All Cookies</a>,</li>
+  <li><a href="#09">09) Generate Random Hex</a>,</li>
+  <li><a href="#10">10) Get Query Params from URL</a>,</li>
+  <li><a href="#11">11) Log Time from Date</a>,</li>
+  <li><a href="#12">12) Check if a number is even or odd</a>,</li>
+  <li><a href="#13">13) Find Average of Numbers</a>,</li>
+  <li><a href="#14">14) Scroll to Top</a>,</li>
+  <li><a href="#15">15) Reverse a string</a>,</li>
+  <li><a href="#16">16) Check if array is empty</a>,</li>
+  <li><a href="#17">17) Get Selected Text</a>,</li>
+  <li><a href="#18">18) Shuffle an Array</a>,</li>
+  <li><a href="#19">19) Detect Dark Mode</a>,</li>
+  <li><a href="#20">20) Remove Duplicated from Array</a>,</li>
+  <li><a href="#21">21) Get the Length of a String</a>,</li>
+  <li><a href="#22">22) Calculate the Area of a Circle</a>,</li>
+  <li><a href="#23">23) Check if a Number is Prime</a>,</li>
+  <li><a href="#24">24) Count Occurrences of a Character in a String</a>,</li>
+  <li><a href="#25">25) Remove Leading and Trailing</a>,</li>
+  <li><a href="#26">26) Generate a Random Number within a Range</a>,</li>
+  <li><a href="#27">27) Convert Seconds to HH:MM:SS Format</a>,</li>
+  <li><a href="#28">28) Get the Last Element of an Array</a>,</li>
+  <li><a href="#29">29) Sort an Array of Numbers in Ascending</a>,</li>
+  <li><a href="#30">30) Check if a String is Palindrome</a>,</li>
+  <li><a href="#31">31) Calculate Factorial of a Number</a>,</li>
+  <li><a href="#32">32) Sum all Numbers in an Array</a>,</li>
+  <li><a href="#33">33) Find the Maximum Value in an Array</a>,</li>
+  <li><a href="#34">34) Get the Current Date in DD/MM/YYYY</a>,</li>
+  <li><a href="#35">35-68) Examples of what is the output of the following tricky code?</a></li>
+</ul></h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="01">01) Get Value of a browser Cookie</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -332,7 +332,7 @@ console.log(isDarkMode) // Result: True or False
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="20">20. Remove Duplicated from Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<Mp>You can easily remove duplicates with <b>Set</b> in JavaScript. Its a life saver.</p>
+<p>You can easily remove duplicates with <b>Set</b> in JavaScript. Its a life saver.</p>
 
 <pre>
 const removeDuplicates = (arr) => [...new Set(arr)];
@@ -387,7 +387,7 @@ const countOccurrences = (str, char) => str.split(char).length - 1;
 countOccurrences("banana", "a");  // Result: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="25">25. Remove Leading and Trailing</h3>
+<h3 id="25">25. Remove Leading and Trailing Whitespaces</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Whitespaces</h4>
 <p>Remove leading and trailing whitespaces from a given string.</p>
@@ -687,9 +687,7 @@ console.log('foo' + true);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="56">56) What is the output of the following tricky code?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-"object". This is because arrays are objects in JavaScript.
-</p>
+<p>"object". This is because arrays are objects in JavaScript.</p>
 
 <pre>
 console.log(typeof []);
