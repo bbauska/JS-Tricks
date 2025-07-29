@@ -167,17 +167,18 @@ pre .line-number span {
   padding: 0 .5em 0 1em;
 }
 pre .cl {
-  display: block;
-  clear: both;
+  display:block;
+  clear:both;
 }
 pre {
+  width: 400px;
   overflow: auto;
 }
 pre[href]:hover  {
   text-decoration: none;
 }
-pre:hover, pre:focus {
-  width: 50%;  /* was: fit-content; before that; width: min-content */
+pre:hover, pre:focus { 
+  width: 400px; 
 }
 
 @media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
