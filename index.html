@@ -4,8 +4,8 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ index.html of js-tricks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <head>
-  <meta charset="utf-8" />
-  <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico"/>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico">
 
   <!-- viewport and seo -->
   <meta name="title" content="JS Tricks">
@@ -23,13 +23,12 @@
       Unspeakable,MarkRober,TheFilmTheorist,TheGameTheorist,Minecraft,TheBoys,JTMusic,DAFUQBoom!?,
       AIMIN,Robby,BrentTV,EYStream,Fortnite,Ninja,SunnyV2,N30N,SamFrank,Dream,Technoblade,
       RyanTrhan,Stellar,DJCook,AnthonyMadia,AnthonyIlla,SmoshGaming,SmoshPit,SmoshCast,Fred,cellardoor,
-      Brian's Blog,Cellar Door" />
+      Brian's Blog,Cellar Door,roblox,#roblox,silusgamingworld,silusgw">
   <meta name="robots" content="index, follow">
-<!--  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">  -->
   <meta name="language" content="English">
   <meta name="author" content="Brian Bauska">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Coding Templates</title>
+  <title>JavaScript Tips &amp; Tricks</title>
   <link rel="canonical" href="https://js-tricks.bauska.org">
   <link rel="stylesheet" href="./css/styles.css">
 
@@ -61,7 +60,7 @@
     <!-- get the button -->
     var mybutton = document.getElementById("myBtn");
 
-    <!-- <i>when the user scrolls down 10px from the top of the document, show the "Top" button</i> -->
+    <!-- when the user scrolls down 10px from the top of the document, show the "Top" button.  -->
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
@@ -72,11 +71,10 @@
       }
     }
 
-  // <i>when the user clicks on the button, scroll to the table of contents near top of document.</i>
+  <!-- when the user clicks on the button, scroll to the table of contents near top of document.  -->
   function topFunction() {
     document.getElementById('toc').scrollIntoView();
   }
-
   </script>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1><a id="toc">JS-Tricks: Table of Contents</a></h1>
@@ -182,8 +180,8 @@ dayOfYear(new Date()); // Result: 272
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="06">6. Capitalise a String</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Javascript doesn't have an inbuilt capitalise function, so we can use the following 
-code for the purpose.</p>
+<p>Javascript doesn't have an inbuilt capitalise function, so we can use the following code for 
+the purpose.</p>
 
 <pre>
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
